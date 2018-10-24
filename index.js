@@ -1,5 +1,7 @@
 const inquirer = require('inquirer')
 
+const data = require('./data.json')
+
 const promise = inquirer.prompt([
 	{
 		type: 'list',
@@ -12,8 +14,18 @@ const promise = inquirer.prompt([
 	},
 	{
 		type: 'input',
+		name: 'age',
+		message: 'What is your age?',
+	},
+	{
+		type: 'input',
 		name: 'height',
 		message: 'What is your height?',
+	},
+	{
+		type: 'input',
+		name: 'weight',
+		message: 'What is your weight?',
 	}
 	])
 
@@ -22,7 +34,7 @@ promise.then((answers) => {
 	console.log(answers)
 	const height = Number(results.height)
 	console.log(height)
-
+	console.log(data)
 	const sex = results.sex
 }) 
 

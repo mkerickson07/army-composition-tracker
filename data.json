@@ -1,0 +1,24 @@
+[
+	{
+		"height": 58,
+		"minWeight": 91,
+		"maxWeights": [
+			{
+				"maxAge": 20, 
+				"maxWeight": 119
+			},
+			{
+				"maxAge": 27,
+				"maxWeight": 121
+			},
+			{
+				"maxAge": 39,
+				"maxWeight": 122
+			},
+			{
+				"maxAge": 100,
+				"maxWeight": 124
+			}
+		]
+	}
+]
