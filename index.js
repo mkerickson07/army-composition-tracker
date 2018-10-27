@@ -1,6 +1,6 @@
 const inquirer = require('inquirer')
 
-const data = require('./data.json')
+const data = require('./femaleHW.json')
 
 const promise = inquirer.prompt([
 	{
