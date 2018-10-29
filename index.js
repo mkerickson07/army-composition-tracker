@@ -2,16 +2,9 @@ const inquirer = require('inquirer');
 
 const data = require('./femaleHW.json');
 
-function compliance (sex, age, height, weight) {
-	const rows = data.filter((obj) => {
-		let matched = false;
-		if (obj.height === height) {
-			matched = true;
-		}
-		return matched;
-	})
-	const row = rows[0]
-}
+const helpers = require('./helpers');
+
+const compliance = helpers.compliance;
 
 const promise = inquirer.prompt([
   {
@@ -42,14 +35,17 @@ const promise = inquirer.prompt([
 
 promise.then((answers) => {
   const results = answers;
-  console.log(answers);
   const height = Number(results.height);
-  console.log(height);
-  console.log(data);
   const sex = results.sex;
   const age = results.age;
   const weight = results.weight;
   const inCompliance = compliance (sex, age, height, weight);
+  if (inCompliance === true) {
+  	console.log('Soldier is in compliance')
+  }
+  else {
+  	console.log('Soldier is NOT in compliance')
+  }
 });
 
 

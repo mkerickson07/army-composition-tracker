@@ -5,18 +5,22 @@
 		"maxWeights": 
 		[
 			{
+				"minAge": 17,
 				"maxAge": 20, 
 				"maxWeight": 119
 			},
 			{
+				"minAge": 21,
 				"maxAge": 27,
 				"maxWeight": 121
 			},
 			{
+				"minAge": 28,
 				"maxAge": 39,
 				"maxWeight": 122
 			},
 			{
+				"minAge": 40,
 				"maxAge": 100,
 				"maxWeight": 124
 			}
@@ -28,6 +32,7 @@
 		"maxWeights":
 		[
 			{
+				"minAge": 17,
 				"maxAge": 20,
 				"maxWeight": 124
 			},
