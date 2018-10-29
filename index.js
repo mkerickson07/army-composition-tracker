@@ -1,3 +1,4 @@
+const chalk = require('chalk')
 const inquirer = require('inquirer');
 
 const data = require('./femaleHW.json');
@@ -41,10 +42,10 @@ promise.then((answers) => {
   const weight = results.weight;
   const inCompliance = compliance (sex, age, height, weight);
   if (inCompliance === true) {
-  	console.log('Soldier is in compliance')
+  	console.log(chalk.green('Soldier is in compliance'));
   }
   else {
-  	console.log('Soldier is NOT in compliance')
+  	console.log(chalk.red('Soldier is NOT in compliance'));
   }
 });
 
